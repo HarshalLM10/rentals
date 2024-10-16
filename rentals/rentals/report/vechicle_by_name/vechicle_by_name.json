@@ -1,0 +1,28 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-10-14 11:54:56.966115",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-10-14 11:57:50.535224",
+ "modified_by": "Administrator",
+ "module": "Rentals",
+ "name": "Vechicle By Name",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT name1, COUNT(*)\nFROM tabVehicle\nGROUP by name1;",
+ "ref_doctype": "Vehicle",
+ "report_name": "Vechicle By Name",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

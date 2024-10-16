@@ -1,0 +1,15 @@
+{
+  "name": "rentals",
+  "version": "1.0.0",
+  "description": "Manage Rentals in Frappe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd portal && yarn install",
+    "dev": "cd portal && yarn dev",
+    "build": "cd portal && yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

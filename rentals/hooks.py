@@ -137,34 +137,38 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"ToDo": {
+		"before_insert": "rentals.api.throw_emoji"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"rentals.tasks.all"
-# 	],
-# 	"daily": [
-# 		"rentals.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"rentals.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"rentals.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"rentals.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "cron": {
+        "30 15 * * 3": [
+            "rentals.api.send_payment_remainder"
+        ]
+    },
+    # "all": [
+    #     "rentals.tasks.all"
+    # ],
+    # "daily": [
+    #     "rentals.tasks.daily"
+    # ],
+    # "hourly": [
+    #     "rentals.tasks.hourly"
+    # ],
+    # "weekly": [
+    #     "rentals.tasks.weekly"
+    # ],
+    # "monthly": [
+    #     "rentals.tasks.monthly"
+    # ],
+}
+
 
 # Testing
 # -------
@@ -242,3 +246,5 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+website_route_rules = [{'from_route': '/portal/<path:app_path>', 'to_route': 'portal'},]
